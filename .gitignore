@@ -1,0 +1,14 @@
+## VS Code
+.history
+
+## Local Env
+.containers
+
+## ENV
+.env
+.env.local
+
+output
+
+## Images
+/images/logowhite.png
