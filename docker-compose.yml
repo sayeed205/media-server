@@ -52,8 +52,9 @@ services:
       # - NVIDIA_DRIVER_CAPABILITIES=all
     volumes:
       - ./.containers/Emby:/config # Configuration directory
-      - ${LOCAL_TV_PATH}:/media/Synology/Television # Media directory
-      - ${LOCAL_MOVIES_PATH}:/media/Synology/Movies # Media directory
+      - ${LOCAL_TV_PATH}:~/media/TV # Media directory
+      - ${LOCAL_MOVIES_PATH}:~/media/movies # Media directory
+      - ${LOCAL_MOVIES_PATH}:~/media/anime # Media directory
       - ./.containers/ssl:/ssl # Add SSL Certs to this directory
     ports:
       - ${EMBY_HOST_PORT}:8096 #http port
@@ -81,8 +82,9 @@ services:
       # - JELLYFIN_PublishedServerUrl=192.168.0.5 #optional
     volumes:
       - ./.containers/Jellyfin:/config
-      - ${LOCAL_TV_PATH}:/media/Synology/Television # Media directory
-      - ${LOCAL_MOVIES_PATH}:/media/Synology/Movies # Media directory
+      - ${LOCAL_TV_PATH}:~/media/TV # Media directory
+      - ${LOCAL_MOVIES_PATH}:~/media/movies # Media directory
+      - ${LOCAL_MOVIES_PATH}:~/media/anime # Media directory
       - ./.containers/Emby/ssl:/ssl # Add SSL Certs to this directory
     ports:
       - ${JELLYFIN_HOST_PORT}:8096
