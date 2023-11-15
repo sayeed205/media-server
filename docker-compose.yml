@@ -306,4 +306,4 @@ volumes:
 networks:
   default:
     driver: bridge
-    name: home-media-docker_default
+    name: media-server
